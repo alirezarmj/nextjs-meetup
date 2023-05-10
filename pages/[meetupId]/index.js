@@ -1,7 +1,7 @@
 import MeetupDetail from '@/components/meetups/meetupDetail'
-// import { connectDatabase } from '@/helper/db-util'
+
 import axios from 'axios'
-// import { ObjectId } from 'mongodb'
+
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
@@ -28,7 +28,7 @@ const MeetupDetails = () => {
             progress: undefined,
             theme: "colored",
           });
-          console.error(error.message);
+       
         });
     }
 

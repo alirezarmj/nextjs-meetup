@@ -47,8 +47,8 @@ const MeetupItem = ({ title, id, image, address }) => {
             <h1 className='text-lg font-bold' >{title}</h1>
             <p className='italic text-sm'>{address}</p>
             <div className='flex justify-between items-center gap-4 p-2 w-fit'>
-                <Link href={`/${id}`} className='px-2 text-xs md:text-sm py-1 border border-rose-500 rounded-md text-rose-700 whitespace-nowrap'>Show Details</Link>
-                <button onClick={() => handleDeleteMeetup(id)} className='px-2 text-xs md:text-sm py-1  border border-rose-500 rounded-md text-rose-700 whitespace-nowrap'>Delete Meetup</button>
+                <Link href={`/${id}`} className='px-2 text-xs md:text-sm py-1 border border-rose-200 rounded-md text-rose-700 dark:text-white  hover:ring-2 hover:ring-sky-300 hover:scale-105 hover:duration-200 duration-200 hover:dark:text-rose-400  whitespace-nowrap'>Show Details</Link>
+                <button onClick={() => handleDeleteMeetup(id)} className='px-2 text-xs md:text-sm py-1  border border-rose-200 dark:text-white  hover:ring-2 hover:ring-sky-300 hover:scale-105 hover:duration-200 duration-200 hover:dark:text-rose-400 rounded-md text-rose-700 whitespace-nowrap'>Delete Meetup</button>
             </div>
         </div>
     )
