@@ -50,8 +50,8 @@ const NewMeetupForm = (props) => {
     const submitDisabled = Object.keys(formik.errors).length > 0 || !formik.dirty;
 
     return (
-        <section className="max-w-[600px] mx-auto p-4">
-            <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4  px-4 py-2 shadow-sm rounded-md  bg-white/30 ">
+        <section className="max-w-[600px] bg-slate-700 mx-auto mt-10  rounded-md">
+            <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4  px-4 py-4 shadow-sm rounded-md  bg-white/30 ">
                 <div className="flex flex-col">
                     <label htmlFor="title" className="font-bold">Meetup Title</label>
                     <input {...formik.getFieldProps("title")} name="title"  className="rounded-md py-1 px-2 outline-none " type="text" id="title" />
@@ -69,7 +69,7 @@ const NewMeetupForm = (props) => {
                 </div>
                 <div className="flex flex-col">
                     <label htmlFor="description" className="font-bold">Description</label>
-                    <textarea {...formik.getFieldProps("description")} name="description"  className="rounded-md py-1 px-2 outline-none  " rows={5} type="text" id="description" />
+                    <textarea {...formik.getFieldProps("description")} name="description"  className="rounded-md resize-none py-1 px-2 outline-none  " rows={5} type="text" id="description" />
                     {formik.errors.description && formik.touched.description && <p className="text-red-500 text-sm pt-1">{formik.errors.description}</p>}
                 </div>
                 <button disabled={submitDisabled} type="submit" className={submitDisabled ? "px-4 py-1 bg-red-800/30 text-white ml-auto rounded-md" : "px-4 py-1 bg-red-800 text-white ml-auto rounded-md"}>Add Meetup</button>
